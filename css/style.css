@@ -100,5 +100,14 @@ hr {
 	.middle p{font-size:16px;border:1px solid white;}
 	.contact_info a {font-size:14px;}
 	.main_title {font-size:25px};
+	.follow_us {
+	    display: block;
+	    position: static;
+	    right: 0;
+	    top: initial;
+	    left: 0;
+	    margin: 2rem 0 0 0;
+	    text-align: center;
+	}
 }
 	

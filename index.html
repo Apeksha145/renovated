@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<!-- Page Title -->
+		<title>Shopping</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap4.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/slope.css">
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<!-- Style Sheet -->
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="main-image p-0">
+				<div class="landing_images img">
+					<img src="images/redirect-new.jpg" alt="shopping" class="offimg img-fluid" />
+					<h3 class="main_title">This site is currently being renovated</h3>
+					 <div class="middle">
+					 <p id="demo"></p>
+					  <hr>
+					  </div>
+					<div class="contact_info">
+						<a href="#myModal" role="button" data-toggle="modal">information</a> 
+					</div>
+				</div>
+			</div>
+			<div class="info_title">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="site_logo">
+								<img src="images/demologo.png" class="m-auto d-block img-fluid" />
+							</div>
+							<!--<div class="site_logo">
+								logo
+							</div>-->
+						</div>
+					</div>
+				</div>
+				<div class="follow_us">
+					<h2>Find us on</h2>
+						<ul>
+							<li>
+								<a href="https://www.instagram.com" target="_blank">
+									<img src="images/instagram.png" alt="instagram" title="instagram" class="img-fluid"/>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.facebook.com" target="_blank">
+									<img src="images/facebook.png" alt="facebook" title="facebook" class="img-fluid"/>
+								</a>
+							</li>
+							<li>
+								<a href="https://twitter.com" target="_blank">
+									<img src="images/twitter.png" alt="twitter" title="twitter" class="img-fluid"/>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com" target="_blank">
+									<img src="images/youtube.png" alt="youtube" title="youtube" class="img-fluid"/>
+								</a>
+							</li>
+						</ul>
+				</div>
+			</div>
+			<div class="modal pr-0" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-full" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" title="Close">
+							<span aria-hidden="true">&#10005;</span>
+						</button>
+					</div>
+					<div class="modal-body p-4" id="result" style="padding-bottom:0!important">
+						<div class="contact">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		//Set Height according to viewport height@ most important 
+		function setHeight() {
+			windowHeight = $(window).innerHeight();
+			var cheight =  windowHeight - 0;
+			$('.img').css('min-height', cheight);
+				//alert(cheight);
+		};
+		setHeight();
+		$(window).resize(function() {
+		setHeight();
+		});	
+		
+		
+		// Set the date we're counting down to
+		var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+		// Update the count down every 1 second
+		var countdownfunction = setInterval(function() {
+
+		  // Get todays date and time
+		  var now = new Date().getTime();
+		  
+		  // Find the distance between now an the count down date
+		  var distance = countDownDate - now;
+		  
+		  // Time calculations for days, hours, minutes and seconds
+		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		  
+		  // Output the result in an element with id="demo"
+		  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+		  + minutes + "m " + seconds + "s ";
+		  
+		  // If the count down is over, write some text 
+		  if (distance < 0) {
+			clearInterval(countdownfunction);
+			document.getElementById("demo").innerHTML = "EXPIRED";
+		  }
+		}, 1000);
+		
+	</script>
+	</body>
+</html>
